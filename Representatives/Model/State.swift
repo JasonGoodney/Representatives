@@ -23,5 +23,5 @@ struct State: Decodable {
         
         name = try container.decode(String.self, forKey: .name)
         representatives = try container.decode([Representative].self, forKey: .representatives)
-    }
+    } 
 }
