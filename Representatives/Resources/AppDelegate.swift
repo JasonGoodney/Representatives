@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RepresentativeController.shared.searchRepresentatives(forState: "CA") { (reps) in
             print(reps)
         }
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UINavigationController(rootViewController: StateListViewController())
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
