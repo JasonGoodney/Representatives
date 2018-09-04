@@ -14,6 +14,7 @@ class StateListViewController: UIViewController {
     lazy var tableView: UITableView = {
         let view = UITableView(frame: .zero, style: .plain)
         view.dataSource = self
+        view.delegate = self
         view.register(UITableViewCell.self, forCellReuseIdentifier: "stateCell")
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -26,6 +27,11 @@ class StateListViewController: UIViewController {
         updateView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if let index = self.tableView.indexPathForSelectedRow{
+            self.tableView.deselectRow(at: index, animated: true)
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -41,7 +47,15 @@ extension StateListViewController: UITableViewDataSource {
         
         return cell
     }
-    
+}
+
+// MARK: - UITableViewDelegate
+extension StateListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let stateDetailVC = StateDetailViewController()
+        stateDetailVC.state = States.all[indexPath.row]
+        navigationController?.pushViewController(stateDetailVC, animated: true)
+    }
 }
 
 // MARK: - Update View
@@ -66,5 +80,6 @@ private extension StateListViewController {
 // MARK: - Navigation
 extension StateListViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
 }

@@ -15,6 +15,8 @@
 		D70BDC06213DD66900260036 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70BDC05213DD66900260036 /* States.swift */; };
 		D70BDC09213DD79100260036 /* RepresentativeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70BDC08213DD79100260036 /* RepresentativeController.swift */; };
 		D70BDC0B213DEDC000260036 /* StateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70BDC0A213DEDC000260036 /* StateListViewController.swift */; };
+		D70BDC0F213DF46700260036 /* StateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70BDC0E213DF46700260036 /* StateDetailViewController.swift */; };
+		D70BDC12213DF4DA00260036 /* RepresentativeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70BDC11213DF4DA00260036 /* RepresentativeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		D70BDC05213DD66900260036 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
 		D70BDC08213DD79100260036 /* RepresentativeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentativeController.swift; sourceTree = "<group>"; };
 		D70BDC0A213DEDC000260036 /* StateListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateListViewController.swift; sourceTree = "<group>"; };
+		D70BDC0E213DF46700260036 /* StateDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDetailViewController.swift; sourceTree = "<group>"; };
+		D70BDC11213DF4DA00260036 /* RepresentativeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentativeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 			children = (
 				D70BDC00213DD41F00260036 /* Model */,
 				D70BDC07213DD77900260036 /* ModelController */,
+				D70BDC10213DF4C000260036 /* View */,
 				D70BDC04213DD5A500260036 /* ViewControllers */,
 				D70BDC03213DD59E00260036 /* Resources */,
 			);
@@ -93,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				D70BDC0A213DEDC000260036 /* StateListViewController.swift */,
+				D70BDC0E213DF46700260036 /* StateDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -103,6 +109,14 @@
 				D70BDC08213DD79100260036 /* RepresentativeController.swift */,
 			);
 			path = ModelController;
+			sourceTree = "<group>";
+		};
+		D70BDC10213DF4C000260036 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D70BDC11213DF4DA00260036 /* RepresentativeTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,11 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D70BDC12213DF4DA00260036 /* RepresentativeTableViewCell.swift in Sources */,
 				D70BDC09213DD79100260036 /* RepresentativeController.swift in Sources */,
 				D70BDBEF213DD1B400260036 /* AppDelegate.swift in Sources */,
 				D70BDC02213DD42E00260036 /* Representative.swift in Sources */,
 				D70BDC0B213DEDC000260036 /* StateListViewController.swift in Sources */,
 				D70BDC06213DD66900260036 /* States.swift in Sources */,
+				D70BDC0F213DF46700260036 /* StateDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
