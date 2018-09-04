@@ -26,8 +26,6 @@ class RepresentativeController {
      
         guard let baseURL = URL(string: baseURLString) else { completion(nil); return }
 
-        
-        
         guard let url = createURL(baseURL: baseURL, byState: state)
             else { completion(nil);  return }
         
@@ -53,10 +51,10 @@ class RepresentativeController {
             } catch let error {
                 print("😳\nThere was an error in \(#function): \(error)\n\n\(error.localizedDescription)\n👿")
             }
-            
         }.resume()
     }
     
+    // How to make to URL creation flexible?
     private func createURL(baseURL: URL, byState state: String) -> URL? {
        
         let url = baseURL

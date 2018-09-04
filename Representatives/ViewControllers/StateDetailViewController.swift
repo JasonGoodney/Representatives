@@ -21,13 +21,14 @@ class StateDetailViewController: UIViewController {
     lazy var tableView: UITableView = {
         let view = UITableView(frame: .zero)
         view.dataSource = self
-        view.register(RepresentativeTableViewCell.self, forCellReuseIdentifier: "representativeCell")
+        view.delegate = self
+        view.register(RepresentativeTableViewCell.self,
+                      forCellReuseIdentifier: "representativeCell")
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     // MARK: - Lifecycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +42,8 @@ class StateDetailViewController: UIViewController {
             self.representatives = reps
             self.reloadTableView()
         }
+        
+        navigationItem.title = state
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +65,15 @@ extension StateDetailViewController: UITableViewDataSource {
         cell.representative = representatives[indexPath.row]
         
         return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension StateDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = RepresentativeDetailViewController()
+        detailVC.representative = representatives[indexPath.row]
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 
@@ -92,8 +104,3 @@ private extension StateDetailViewController {
     }
 }
 
-// MARK: - Navigation
-extension StateDetailViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
-}

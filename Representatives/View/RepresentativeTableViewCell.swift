@@ -15,8 +15,8 @@ class RepresentativeTableViewCell: UITableViewCell {
             updateView()
         }
     }
-    lazy var nameLabel = UILabel()
-    lazy var districtLabel = UILabel()
+    var nameLabel = UILabel()
+    var districtLabel = UILabel()
 
     override func awakeFromNib() {
         super.awakeFromNib()

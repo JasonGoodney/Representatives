@@ -76,10 +76,3 @@ private extension StateListViewController {
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 }
-
-// MARK: - Navigation
-extension StateListViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-}
