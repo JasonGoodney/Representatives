@@ -8,7 +8,19 @@
 
 import Foundation
 
-
+struct State: Decodable {
+    private enum CodingKeys: String, CodingKey {
+        case representatives = "results"
+    }
+    
+    let representatives: [Representative]
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        representatives = try container.decode([Representative].self, forKey: .representatives)
+    }
+}
 
 struct Representative: Decodable {
     let name: String

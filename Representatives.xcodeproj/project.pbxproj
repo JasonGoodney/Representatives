@@ -17,6 +17,7 @@
 		D70BDC0B213DEDC000260036 /* StateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70BDC0A213DEDC000260036 /* StateListViewController.swift */; };
 		D70BDC0F213DF46700260036 /* StateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70BDC0E213DF46700260036 /* StateDetailViewController.swift */; };
 		D70BDC12213DF4DA00260036 /* RepresentativeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70BDC11213DF4DA00260036 /* RepresentativeTableViewCell.swift */; };
+		D70BDC16213E09EE00260036 /* RepresentativeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70BDC15213E09EE00260036 /* RepresentativeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D70BDC0A213DEDC000260036 /* StateListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateListViewController.swift; sourceTree = "<group>"; };
 		D70BDC0E213DF46700260036 /* StateDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDetailViewController.swift; sourceTree = "<group>"; };
 		D70BDC11213DF4DA00260036 /* RepresentativeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentativeTableViewCell.swift; sourceTree = "<group>"; };
+		D70BDC15213E09EE00260036 /* RepresentativeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentativeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				D70BDC11213DF4DA00260036 /* RepresentativeTableViewCell.swift */,
+				D70BDC15213E09EE00260036 /* RepresentativeDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D70BDC16213E09EE00260036 /* RepresentativeDetailView.swift in Sources */,
 				D70BDC12213DF4DA00260036 /* RepresentativeTableViewCell.swift in Sources */,
 				D70BDC09213DD79100260036 /* RepresentativeController.swift in Sources */,
 				D70BDBEF213DD1B400260036 /* AppDelegate.swift in Sources */,

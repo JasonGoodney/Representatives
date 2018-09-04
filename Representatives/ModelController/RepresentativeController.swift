@@ -46,11 +46,9 @@ class RepresentativeController {
                 let jsonData = asciiData.data(using: .utf8) else {
                 completion([]); return
             }
-            
-            
+        
             do {
-                let resultDictionary = try JSONDecoder().decode([String : [Representative]].self, from: jsonData)
-                let representatives = resultDictionary["results"]
+                let representatives = try JSONDecoder().decode(State.self, from: jsonData).representatives
                 completion(representatives)
             } catch let error {
                 print("😳\nThere was an error in \(#function): \(error)\n\n\(error.localizedDescription)\n👿")
